@@ -98,6 +98,11 @@ df_final = df.select(
     "category"
 )
 
+"""测试数据
+print("表前十行")
+df_final.show(10, truncate=False)
+"""
+
 df_final.write.mode("overwrite").saveAsTable("dwd.dwd_poi_info")
 
 spark.stop()
